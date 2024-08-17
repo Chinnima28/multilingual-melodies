@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingual Melodies</title>
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            background-color: #121212; /* Spotify's black background */
+            color: #1DB954; /* Spotify's green */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #1DB954;
+        }
+
+        button {
+            background-color: #1DB954;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1em;
+            margin: 10px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #14833B; /* Darker green on hover */
+        }
+
+        #track-info, #lyrics-section {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #1A1A1A; /* Slightly lighter black for sections */
+            color: #fff;
+        }
+
+        #lyrics, #translated-lyrics {
+            background-color: #0E0E0E; /* Even darker background for contrast */
+            border-radius: 10px;
+            padding: 20px;
+            white-space: pre-wrap; /* Preserve line breaks and spacing */
+            font-family: 'Courier New', monospace; /* Monospace font for lyrics */
+            line-height: 1.5; /* Space out lines for readability */
+            color: #1DB954;
+            margin-top: 10px;
+        }
+
+        select {
+            background-color: #1DB954;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 25px;
+            margin-left: 10px;
+        }
+
+        label {
+            font-size: 1.2em;
+            margin-right: 10px;
+            color: #1DB954;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multilingual Melodies</h1>
+
+    <button id="auth-button">Authorize Spotify</button>
+    <button id="get-track-info">Get Track Info</button>
+
+    <div id="track-info"></div>
+    
+    <div id="lyrics-section">
+        <h2>Lyrics</h2>
+        <div id="lyrics"></div>
+        <button id="translate-button">Translate Lyrics</button>
+        <label for="language">Translate to:</label>
+        <select id="language">
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="hi">Hindi</option>
+            <option value="zh">Chinese</option>
+        </select>
+        <div id="translated-lyrics"></div>
+    </div>
+</body>
+</html>
